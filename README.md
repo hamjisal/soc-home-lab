@@ -10,10 +10,10 @@ evidence and structured incident reports.
 
 | Component | Details |
 |---|---|
-| SIEM | Wazuh 4.x running on Ubuntu 22.04 Server |
+| SIEM | Wazuh 4.13.1 running on Ubuntu 24.04 Server |
 | Endpoint | Windows 10 with Sysmon (SwiftOnSecurity config, hardened) |
 | Monitoring | File Integrity Monitoring (FIM) across Desktop, Downloads, AppData, ProgramData |
-| Virtualisation | VMware Workstation |
+| Virtualisation | VMware Workstation  Pro 25H2u1 |
 | Framework | MITRE ATT&CK for detection mapping |
 
 ## What This Lab Can Detect
