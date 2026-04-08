@@ -1,31 +1,38 @@
-# SOC Home Lab
+# SOC Home Lab — Detection Engineering & Blue Team Practice
 
 ## Overview
-This repository documents my SOC Analyst home lab built to simulate real-world detection, monitoring, and incident response workflows.
+A fully operational SOC home lab built to simulate real-world attacker 
+behaviour, validate detections, and develop analyst workflows. All 
+simulations are mapped to MITRE ATT&CK techniques with documented 
+evidence and structured incident reports.
 
 ## Lab Architecture
-- Wazuh SIEM (Ubuntu 22.04)
-- Windows 10 Endpoint with Sysmon
-- File Integrity Monitoring (FIM)
-- MITRE ATT&CK simulations
-- Custom detection rules
 
-## Goals
-- Build practical SOC analyst skills
-- Develop detection engineering fundamentals
-- Simulate attacker behaviour using MITRE ATT&CK
-- Analyse alerts and produce incident reports
+| Component | Details |
+|---|---|
+| SIEM | Wazuh 4.x running on Ubuntu 22.04 Server |
+| Endpoint | Windows 10 with Sysmon (SwiftOnSecurity config, hardened) |
+| Monitoring | File Integrity Monitoring (FIM) across Desktop, Downloads, AppData, ProgramData |
+| Virtualisation | VMware Workstation |
+| Framework | MITRE ATT&CK for detection mapping |
 
-## Repository Structure
-- /lab-setup — installation steps, configs, architecture
-- /case-studies — documented attack simulations and detections
-- /screenshots — evidence from Wazuh and Sysmon
+## What This Lab Can Detect
+
+- Suspicious PowerShell and CMD execution
+- Registry Run key persistence
+- LOLBin usage (certutil, mshta, wmic)
+- Scheduled task creation
+- File drops in monitored paths
+- New service installation
+- Hosts file modification
+- Execution of unsigned binaries from Temp
 
 ## Case Studies
-Coming soon:
-- Suspicious PowerShell Execution (T1059.001)
-- Registry Run Key Persistence (T1547.001)
-- LOLBin Execution (certutil.exe)
 
-## Contact
-Hamed — SOC Analyst in training
+| # | Technique | MITRE ID | Status |
+|---|---|---|---|
+| 1 | Suspicious PowerShell Execution | T1059.001 | ✅ Documented |
+| 2 | Registry Run Key Persistence | T1547.001 | ✅ Documented |
+| 3 | LOLBin Execution via certutil.exe | T1105 | ✅ Documented |
+
+## Repository Structure
