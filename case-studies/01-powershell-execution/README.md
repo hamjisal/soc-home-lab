@@ -46,7 +46,13 @@ Summarise:
 - Any tuning or improvements you made
 
 ## Screenshots
-(Add your Wazuh alert screenshot here)
-(Add your Sysmon event screenshot here)
+## Sysmon Event ID 1 – Process Creation
+
+![Sysmon Event](images/sysmon-event-id-1.png)
+
+## Wazuh Detection – Encoded PowerShell Command
+
+![Wazuh Alert](images/wazuh-encoded-command-alert.png)
+
 
 
