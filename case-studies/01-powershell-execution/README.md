@@ -54,14 +54,6 @@ powershell.exe -ExecutionPolicy Bypass -EncodedCommand <base64-string>
 6. **Escalation decision:**  
    The combination of encoded PowerShell execution, suspicious parent-child process behavior, file drop, and discovery activity indicates a likely compromise. This would be escalated as **High severity**.
 
-
-1. **Parent process:** powershell.exe was spawned by **<insert parent process here — e.g., explorer.exe or cmd.exe>**.
-2. **Decoded the Base64 payload:** The encoded command decoded to: **<insert decoded payload summary here>**.
-3. **Network connections (Sysmon Event ID 3):** **<state whether Sysmon logged any outbound connections — if none, write “No network connections were logged.”>**
-4. **File writes (Sysmon Event ID 11):** Wazuh raised Rule 92213 — an executable was dropped in a folder commonly used by malware. This supports the malicious activity.
-5. **Discovery activity:** Wazuh detected `net.exe` enumeration (Rule 92039), indicating the attacker attempted account discovery.
-6. **Escalation decision:** The combination of encoded PowerShell execution, file drop, and discovery activity indicates a likely compromise. This would be escalated as **High severity**.
-
 ## MITRE ATT&CK Mapping
 - Tactic: Execution
 - Technique: T1059.001 — PowerShell
