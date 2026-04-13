@@ -40,10 +40,15 @@ powershell.exe -ExecutionPolicy Bypass -EncodedCommand <base64-string>
 - Relevance: Common in initial access, lateral movement, and C2 communication
 
 ## Outcome
-Summarise:
-- What the detection caught
-- What it missed
-- Any tuning or improvements you made
+
+Wazuh successfully detected the simulated encoded PowerShell activity on the Win10-Lab endpoint. The key alert was:
+
+- **Rule description:** Powershell.exe spawned a powershell process which executed a base64 encoded command  
+- **Rule level:** 12  
+- **Rule ID:** 92057  
+
+In addition to that, Wazuh also raised related alerts for an executable file dropped in a folder commonly used by malware (Level 15, Rule ID 92213) and discovery activity such as `net.exe` account enumeration. Together, these events show that the Sysmon → Wazuh pipeline is working as intended and that this lab can reliably detect suspicious PowerShell execution and early-stage attacker behaviour.
+
 
 ## Screenshots
 ## Sysmon Event ID 1 – Process Creation
