@@ -14,7 +14,7 @@ activity that mimics real attacker behaviour.
 ## Attack Simulation
 The following command was executed to simulate malicious PowerShell behaviour:
 
-powershell.exe -ExecutionPolicy Bypass -EncodedCommand <base64-string>
+powershell.exe -ExecutionPolicy Bypass -EncodedCommand SQBFAFgAIAAoAEcAZQB0AC0ARABhAHQAZQApAA==
 
 
 ### Why this matters
@@ -76,25 +76,4 @@ In addition to that, Wazuh also raised related alerts for an executable file dro
 
 ### Wazuh Detection – Encoded PowerShell Command
 ![Wazuh Alert](images/wazuh-encoded-command-alert.png)
-## Outcome
-
-Wazuh successfully detected the simulated encoded PowerShell activity on the Win10-Lab endpoint. The key alert was:
-
-- **Rule description:** Powershell.exe spawned a powershell process which executed a base64 encoded command  
-- **Rule level:** 12  
-- **Rule ID:** 92057  
-
-In addition to that, Wazuh also raised related alerts for an executable file dropped in a folder commonly used by malware (Level 15, Rule ID 92213) and discovery activity such as `net.exe` account enumeration. Together, these events show that the Sysmon → Wazuh pipeline is working as intended and that this lab can reliably detect suspicious PowerShell execution and early-stage attacker behaviour.
-
-
-## Screenshots
-## Sysmon Event ID 1 – Process Creation
-
-![Sysmon Event](images/sysmon-event-id-1.png)
-
-## Wazuh Detection – Encoded PowerShell Command
-
-![Wazuh Alert](images/wazuh-encoded-command-alert.png)
-
-
 
