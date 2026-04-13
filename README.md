@@ -52,4 +52,11 @@ evidence and structured incident reports.
 │       └── README.md
 │
 └── README.md
+```
+
+## Connect With Me
+
+If you'd like to follow my cybersecurity journey or get in touch, you can find me on LinkedIn:
+
+🔗 **www.linkedin.com/in/hamed-salami**
 
