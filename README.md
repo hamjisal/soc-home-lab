@@ -50,4 +50,4 @@ evidence and structured incident reports.
 │       │   └── wazuh-encoded-command-alert.png
 │       └── README.md
 │
-└── README.md```
+└── README.md
