@@ -22,10 +22,15 @@ powershell.exe -ExecutionPolicy Bypass -EncodedCommand <base64-string>
 - Attackers use this pattern for initial access, persistence, and C2 activity  
 
 ## Detection
-- Sysmon Event ID: 1 (Process Creation)
-- Wazuh alert level: [e.g., Level 10]
-- Triggered rule: [rule name/ID]
-- Screenshot: (add screenshot here)
+
+- **Detection rule:** Powershell.exe spawned a powershell process which executed a base64 encoded command  
+- **Wazuh alert level:** 12  
+- **Triggered rule ID:** 92057  
+- **Additional related alerts:**  
+  - Executable file dropped in folder commonly used by malware (Level 15, Rule ID 92213)  
+  - Discovery activity via `net.exe` (Level 3, Rule ID 92039)  
+  - Suspicious file creation in Windows root folder (Level 9, Rule ID 92205)
+
 
 ## Investigation Walkthrough
 1. Identify the parent process (e.g., explorer.exe, cmd.exe)
