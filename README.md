@@ -38,6 +38,7 @@ evidence and structured incident reports.
 ## Repository Structure
 
 ```.
+.
 ├── lab-setup/
 │   ├── wazuh-manager/
 │   ├── wazuh-agent/
@@ -51,3 +52,5 @@ evidence and structured incident reports.
 │       └── README.md
 │
 └── README.md
+```.
+
