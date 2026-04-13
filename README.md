@@ -36,3 +36,17 @@ evidence and structured incident reports.
 | 3 | LOLBin Execution via certutil.exe | T1105 | ✅ Documented |
 
 ## Repository Structure
+(.)
+├── lab-setup/
+│   ├── wazuh-manager/
+│   ├── wazuh-agent/
+│   └── sysmon-config/
+│
+├── case-studies/
+│   └── 01-powershell-execution/
+│       ├── images/
+│       │   ├── sysmon-event-id-1.png
+│       │   └── wazuh-encoded-command-alert.png
+│       └── README.md
+│
+└── (README.md)
