@@ -36,7 +36,8 @@ evidence and structured incident reports.
 | 3 | LOLBin Execution via certutil.exe | T1105 | ✅ Documented |
 
 ## Repository Structure
-.
+
+```.
 ├── lab-setup/
 │   ├── wazuh-manager/
 │   ├── wazuh-agent/
@@ -49,4 +50,4 @@ evidence and structured incident reports.
 │       │   └── wazuh-encoded-command-alert.png
 │       └── README.md
 │
-└── README.md
+└── README.md```
